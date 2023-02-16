@@ -1,0 +1,15 @@
+
+<! Start >
+    <script>
+let startTime = new Date();
+document.cookie = "start_time" + startTime;
+    </script>
+
+<! End >
+    <script>
+window.onbeforeunload = function timer(){
+    let endTime = new Date();
+    let timeSpent = (endTime - startTime) / 1000;
+    document.cookie = "time_spent=" + timeSpent;
+}
+    </script>
